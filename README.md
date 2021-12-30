@@ -15,6 +15,9 @@ This solution has 2 diferent projects in it.
 2. Connect project to a database (SQLServer, PostgreSQL, ...)
 3. Create **UserController** and add two endpoint for :
     
-    - **Createing** a user
+    - **Creating** a user
+    - **Update** a user
     - **Get** the information of a user 
 4. Add **IntegrationTest** for above endpoints
+
+**Note**: You must apply validation rules related to entity.
