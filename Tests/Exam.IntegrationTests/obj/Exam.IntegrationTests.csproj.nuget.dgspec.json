@@ -1,35 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SourceControl\\Workspace\\Exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj": {}
+    "G:\\Project\\New folder\\New folder\\exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj": {}
   },
   "projects": {
-    "D:\\SourceControl\\Workspace\\Exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj": {
+    "G:\\Project\\New folder\\New folder\\exam\\DomainModel\\DomainModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SourceControl\\Workspace\\Exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj",
-        "projectName": "Exam.IntegrationTests",
-        "projectPath": "D:\\SourceControl\\Workspace\\Exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj",
-        "packagesPath": "C:\\Users\\kaveh naseri\\.nuget\\packages\\",
-        "outputPath": "D:\\SourceControl\\Workspace\\Exam\\Tests\\Exam.IntegrationTests\\obj\\",
+        "projectUniqueName": "G:\\Project\\New folder\\New folder\\exam\\DomainModel\\DomainModel.csproj",
+        "projectName": "DomainModel",
+        "projectPath": "G:\\Project\\New folder\\New folder\\exam\\DomainModel\\DomainModel.csproj",
+        "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
+        "outputPath": "G:\\Project\\New folder\\New folder\\exam\\DomainModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kaveh naseri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -40,9 +39,270 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Ackee.Domain.Model": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Project\\New folder\\New folder\\exam\\Exam.API\\Exam.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Project\\New folder\\New folder\\exam\\Exam.API\\Exam.API.csproj",
+        "projectName": "Exam.API",
+        "projectPath": "G:\\Project\\New folder\\New folder\\exam\\Exam.API\\Exam.API.csproj",
+        "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
+        "outputPath": "G:\\Project\\New folder\\New folder\\exam\\Exam.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\Project\\New folder\\New folder\\exam\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "G:\\Project\\New folder\\New folder\\exam\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ackee.AspNetCore": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            },
+            "Ackee.Config": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            },
+            "Ackee.Config.Autofac": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            },
+            "Ackee.DataAccess.EfCore": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            },
+            "Ackee.Logger": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Project\\New folder\\New folder\\exam\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Project\\New folder\\New folder\\exam\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "G:\\Project\\New folder\\New folder\\exam\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
+        "outputPath": "G:\\Project\\New folder\\New folder\\exam\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\Project\\New folder\\New folder\\exam\\DomainModel\\DomainModel.csproj": {
+                "projectPath": "G:\\Project\\New folder\\New folder\\exam\\DomainModel\\DomainModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ackee.DataAccess.EfCore": {
+              "target": "Package",
+              "version": "[2.0.68, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Project\\New folder\\New folder\\exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Project\\New folder\\New folder\\exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj",
+        "projectName": "Exam.IntegrationTests",
+        "projectPath": "G:\\Project\\New folder\\New folder\\exam\\Tests\\Exam.IntegrationTests\\Exam.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
+        "outputPath": "G:\\Project\\New folder\\New folder\\exam\\Tests\\Exam.IntegrationTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\Project\\New folder\\New folder\\exam\\Exam.API\\Exam.API.csproj": {
+                "projectPath": "G:\\Project\\New folder\\New folder\\exam\\Exam.API\\Exam.API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
@@ -79,7 +339,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
