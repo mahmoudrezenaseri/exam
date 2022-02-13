@@ -1,6 +1,10 @@
+using Exam.API.Models;
+using Exam.API.Services.Implementations;
+using Exam.API.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +31,10 @@ namespace Exam.API
         {
 
             services.AddControllers();
+            var connectionString = Configuration.GetConnectionString("MSSQL");
+
+            services.AddTransient<IUserService, UserService>();
+            services.AddDbContext<ExamDbContext>(x => x.UseSqlServer(connectionString));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Exam.API", Version = "v1" });

@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\user\\Source\\Repos\\ghoreishiexam\\Exam.API", "Exam.API.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exam.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
