@@ -1,6 +1,14 @@
+using Exam.Core.ApplicationService.Users.Commands.AddUser;
+using Exam.Core.Domain.Users.Contracts;
+using Exam.MappingProfiles.Domain.Users;
+using Exam.Persistence.SqlServer;
+using Exam.Persistence.SqlServer.Users;
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,6 +38,22 @@ namespace Exam.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Exam.API", Version = "v1" });
+            });
+
+            services.AddDbContext<ExamDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("ExamConnectionString"));
+            });
+
+            services.AddScoped<IUserCommandRepository, UserCommandRepository>();
+            services.AddScoped<IUserQueryRepository, UserQueryRepository>();
+            
+            services.AddMediatR(typeof(AddUserCommandHandler).Assembly);
+            services.AddAutoMapper(typeof(UserProfile).Assembly);
+            services.AddFluentValidation(options =>
+            {
+                options.RegisterValidatorsFromAssemblyContaining<AddUserCommandValidator>();
+                options.AutomaticValidationEnabled = false;
             });
         }
 

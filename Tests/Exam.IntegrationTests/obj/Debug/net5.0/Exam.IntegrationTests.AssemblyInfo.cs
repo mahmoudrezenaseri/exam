@@ -11,6 +11,14 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\_\\NewExam\\exam\\Exam.API", "Exam.API.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.Core.ApplicationService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=nu" +
+    "ll", "D:\\_\\NewExam\\exam\\Exam.Core.ApplicationService", "Exam.Core.ApplicationService.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.Core.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\_\\NewExam\\exam\\Exam.Core.Domain", "Exam.Core.Domain.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\_\\NewExam\\exam\\Exam.Framework", "Exam.Framework.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.MappingProfiles, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\_\\NewExam\\exam\\Exam.MappingProfiles", "Exam.MappingProfiles.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Exam.Persistence.SqlServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" +
+    "", "D:\\_\\NewExam\\exam\\Exam.Persistence.SqlServer", "Exam.Persistence.SqlServer.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exam.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
