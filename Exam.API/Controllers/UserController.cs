@@ -10,20 +10,16 @@ namespace Exam.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private GetUserServices getUserServices;
-        private UpdateUsersService updateUsersService;
-        private CreateUsersService createUsersService;
-        public UsersController(GetUserServices getUserServices,
-            UpdateUsersService updateUsersService, 
-            CreateUsersService createUsersService)
-        {
-            this.getUserServices = getUserServices;
-            this.updateUsersService = updateUsersService;
-            this.createUsersService = createUsersService;
+        
+        private IUserService _userService;
 
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
         }
+
 
         // GET: api/<UsersController>
         //[HttpGet]
@@ -34,23 +30,23 @@ namespace Exam.API.Controllers
 
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public DtoUser Get(int id)
+        public UserDto Get(int id)
         {
-            return getUserServices.getuser(id) ;
+            return _userService.GetUser(id) ;
         }
 
         // POST api/<UsersController>
         [HttpPost]
-        public void Post([FromBody] DtoUser dtoUse )
+        public void Post([FromBody] UserDto userDto )
         {
-            createUsersService.CreatUsers(dtoUse);
+            _userService.CreatUser(userDto);
         }
 
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] DtoUser dtoUser)
+        public bool Put(int id, [FromBody] UserDto userDto)
         {
-            updateUsersService.UpdateUser(id, dtoUser);
+            return _userService.UpdateUser(id, userDto);
         }
 
         // DELETE api/<UsersController>/5

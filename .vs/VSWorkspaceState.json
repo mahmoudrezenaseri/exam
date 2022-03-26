@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Exam.API\\Model",
-    "\\Exam.API\\Model\\Context",
-    "\\Exam.API\\Model\\Dto",
-    "\\Exam.API\\Model\\Entity",
-    "\\Exam.API\\Model\\Services"
+    ""
   ],
-  "SelectedNode": "\\Tests",
+  "SelectedNode": "\\Exam.sln",
   "PreviewInSolutionExplorer": false
 }

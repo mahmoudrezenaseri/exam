@@ -32,11 +32,9 @@ namespace Exam.API
 
             services.AddControllers();
             services.AddDbContext<DatabaseContext>(options =>
-                  options.UseSqlServer("ExsamConnectionString"));
+                  options.UseSqlServer(Configuration.GetConnectionString("ExsamConnectionString") ));
 
-            services.AddTransient<ICreatUsersService,CreateUsersService>();
-            services.AddTransient<IGetUserServices,GetUserServices>();
-            services.AddTransient<IUpdateUsersService,UpdateUsersService>();
+            services.AddTransient<IUserService,UserService>();
 
             services.AddSwaggerGen(c =>
             {
