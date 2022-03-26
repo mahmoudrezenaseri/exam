@@ -1,20 +1,29 @@
 ﻿
+using Exam.API.Model.Dto;
 using Exam.API.Model.Entity;
 
 namespace Exam.API.Model.Services
 {
     public class CreateUsersService : ICreatUsersService
     {
-        DatabaseContext _db;
+        private DatabaseContext _db;
         public CreateUsersService(DatabaseContext db)
         {
             this._db = db;
         }
 
-        void ICreatUsersService.CreatUsers(User user)
+  
+
+        public void  CreatUsers(DtoUser dtouser)
         {
-            _db.Users.Add(user);
-            
+            Users users = new Users()
+            {
+                FirstName = dtouser.FirstName,
+                LastName = dtouser.LastName,    
+                NationalCode = dtouser.NationalCode,
+                PhoneNumber = dtouser.PhoneNumber,
+            };
+            _db.Users.Add(users);
         }
     }
 }

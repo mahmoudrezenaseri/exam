@@ -12,7 +12,7 @@ namespace Exam.API.Model.Entity
 
         }
      
-        public DbSet<User> Users { get; set; }
+        public DbSet<Users> Users { get; set; }
 
     }
 }

@@ -1,20 +1,29 @@
-﻿using Exam.API.Model.Entity;
+﻿using Exam.API.Model.Dto;
+using Exam.API.Model.Entity;
 using System.Linq;
 
 namespace Exam.API.Model.Services
 {
     public class GetUserServices : IGetUserServices 
     {
-        DatabaseContext _db;
+        private DatabaseContext _db;
         public GetUserServices(DatabaseContext db)
         {
             this._db = db;
         }
-        public User getuser(int _natiobalcod)
+        public DtoUser getuser(int _NatinalCod)
         {
-            return  _db.Users.Where(u => u.NationalCode==_natiobalcod).FirstOrDefault();
-            
-            
+            Users users = _db.Users.FirstOrDefault(p => p.NationalCode == _NatinalCod);
+            DtoUser dtoUser = new DtoUser()
+            {
+                FirstName = users.FirstName,
+                LastName = users.LastName,  
+                NationalCode = users.NationalCode,
+                PhoneNumber = users.PhoneNumber,
+
+            };
+            return dtoUser;
+
         }
     }
 }

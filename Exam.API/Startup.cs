@@ -1,4 +1,5 @@
 using Exam.API.Model.Entity;
+using Exam.API.Model.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,8 +31,12 @@ namespace Exam.API
             
 
             services.AddControllers();
-            services.AddDbContext<DatabaseContext>(
-        options => options.UseSqlServer("ExsamConnectionString"));
+            services.AddDbContext<DatabaseContext>(options =>
+                  options.UseSqlServer("ExsamConnectionString"));
+
+            services.AddTransient<ICreatUsersService,CreateUsersService>();
+            services.AddTransient<IGetUserServices,GetUserServices>();
+            services.AddTransient<IUpdateUsersService,UpdateUsersService>();
 
             services.AddSwaggerGen(c =>
             {
